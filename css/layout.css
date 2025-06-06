@@ -1,0 +1,155 @@
+/* === Header & Navigation === */
+.site-header {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  border-bottom: 1px solid #e7e7e7;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+#header-logo {
+  max-height: 60px;
+  width: auto;
+  display: block;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
+}
+
+.main-navigation {
+  display: none;
+}
+
+.main-navigation a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.main-navigation a:hover {
+  color: #007bff;
+  background-color: #e9ecef;
+  border-radius: 4px;
+}
+
+.nav-toggle {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-navigation.open {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 80px;
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  body { /* Body padding-top für mobile Header-Höhe anpassen, falls nötig */
+    padding-top: 80px;
+  }
+  .main-navigation.open {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #e7e7e7;
+    border-top: none;
+    z-index: 999;
+    border-radius: 0 0 4px 4px;
+    margin-right: 0;
+  }
+  .main-navigation a { /* Gilt für Links im geschlossenen und geöffneten Zustand */
+    padding: 12px 20px; /* Allgemeines Padding für Links */
+    width: 100%; /* Für vertikales Menü */
+    text-align: center; /* Für vertikales Menü */
+    border-bottom: 1px solid #e7e7e7; /* Für vertikales Menü */
+    box-sizing: border-box; /* Für vertikales Menü */
+  }
+   .main-navigation.open a { /* Spezifisch für geöffnete mobile Navi */
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+  }
+  .main-navigation a:last-child {
+    border-bottom: none;
+  }
+  .nav-toggle.open .hamburger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .nav-toggle.open .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle.open .hamburger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* === Footer === */
+footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-size: 0.9em;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+footer p { /* Spezifische Zentrierung für Footer-Texte */
+  text-align: center;
+}
+
+footer a {
+  color: #6c757d;
+}
+
+footer a:hover {
+  color: #495057;
+}
+
+footer .legal-links {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+footer .legal-links a {
+    margin: 0 10px;
+    color: #6c757d;
+}
+footer .legal-links a:hover {
+    color: #495057;
+    text-decoration: underline;
+}

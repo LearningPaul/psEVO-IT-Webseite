@@ -1,0 +1,141 @@
+@charset "UTF-8";
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+  color: #333;
+  min-height: 100vh;
+  padding-top: 90px; /* Angepasst an Header-Höhe */
+  padding-bottom: 40px; /* Für Footer */
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  width: 90%;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+#logo { /* Allgemeines Logo, falls es außerhalb des Headers verwendet wird */
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px auto;
+}
+
+.evo-it-styled {
+  color: #007bff;
+  font-weight: bold;
+}
+
+header { /* Allgemeiner Header-Tag, falls für semantische Struktur genutzt */
+  margin-bottom: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header h1 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 2.5em;
+}
+
+header p.slogan {
+  color: #34495e;
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+header p { /* Allgemeiner p-Tag Stil im Header-Kontext */
+  color: #34495e;
+  font-size: 1.2em;
+  margin-top: 0;
+  text-align: center; /* Spezifische Zentrierung für Header-Texte */
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #343a40;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  font-size: 1.8em;
+}
+
+p {
+  color: #555;
+  font-size: 1em;
+  line-height: 1.7;
+  text-align: left; /* Standard Textausrichtung */
+}
+
+/* Zentrierung für den Paragraphen, der den Button-Link in #digital-partner enthält */
+#digital-partner .button-paragraph {
+  text-align: center;
+}
+/* Und für den "Kurz & Knapp" Abschnitt, falls gewünscht */
+#ueber-mich-kurz p {
+  text-align: center;
+}
+
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background-color: #6c757d;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.button-link:hover {
+  background-color: #5a6268;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Basic responsiveness */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    margin-top: 20px; /* Abstand zum fixierten Header */
+  }
+  header h1 {
+    font-size: 2em;
+  }
+  header p { /* Gilt für p im allgemeinen header-Tag */
+    font-size: 1.1em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+}
