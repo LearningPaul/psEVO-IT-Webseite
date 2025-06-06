@@ -1,0 +1,207 @@
+// Optional: Import von Variablen oder Mixins, falls du sie später nutzt
+// @import 'variables';
+// @import 'mixins';
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0; // Reset padding for body
+    background-color: #f4f7f6; // Ein sanfter Hintergrund
+    color: #333;    
+    // display: flex; // Entfernt, da Container sich selbst zentrieren und dies globale Layout-Probleme verursachen kann
+    // flex-direction: column; // Entfernt
+    // align-items: center;    // Entfernt
+    min-height: 100vh;
+    padding-top: 40px; // Add some space at the top
+    padding-bottom: 40px; // Add some space at the bottom
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 700px;
+    width: 90%; // For smaller screens
+    background: #ffffff;
+    padding: 30px 40px; // More horizontal padding
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center; /* Zentriert den Text und Inline-Block-Elemente innerhalb des Containers */
+    margin-left: auto; /* Zentriert den Container-Block horizontal */
+    margin-right: auto; /* Zentriert den Container-Block horizontal */
+}
+
+header {
+    margin-bottom: 30px;
+    // If <header> is a direct child of <body> (e.g., on aboutme.html for a global header)
+    // it should span the full width and its content centered by an inner .container
+    width: 100%;
+    box-sizing: border-box; // Ensure padding/border don't add to width
+}
+
+header h1 {
+    color: #2c3e50; // Ein dunkleres Blau/Grau
+    margin-top: 0; // Remove default top margin
+    margin-bottom: 0.5em;
+    font-size: 2.5em; // Larger main heading
+}
+
+header p.slogan { /* Spezifischer Selektor für den Slogan im Header, falls nötig */
+    color: #34495e; // Etwas heller als die Überschrift
+    font-size: 1.2em; // Slightly larger sub-heading
+    margin-top: 0;
+}
+
+/* Allgemeiner p-Tag Stil, falls der Slogan kein eigener p-Tag ist */
+header p {
+    color: #34495e;
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+
+section {
+    margin-bottom: 30px; // Space between sections
+}
+
+h2 {
+    color: #16a085; // Ein Akzentgrün
+    border-bottom: 2px solid #eee; // Lighter border
+    padding-bottom: 0.5em; // More padding
+    margin-top: 1.5em;
+    margin-bottom: 1em; // Space after h2
+    font-size: 1.8em; // Larger section headings
+}
+
+p {
+    color: #555; // Slightly lighter paragraph text
+    font-size: 1em;
+    line-height: 1.7; // More line height for readability
+    text-align: left; /* Standard Textausrichtung für längere Absätze */
+}
+
+/* Spezifische Zentrierung für kurze Texte im Header oder Footer, falls nötig */
+header p, footer p {
+    text-align: center;
+}
+/* Und für den "Kurz & Knapp" Abschnitt, falls gewünscht */
+#ueber-mich-kurz p {
+    text-align: center;
+}
+
+
+a {
+    color: #2980b9; // Ein klares Blau für Links
+    text-decoration: none;
+    transition: color 0.3s ease; // Smooth transition for hover
+}
+
+a:hover {
+    color: #1c5a82; // Darker blue on hover
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee; // Separator for footer
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+footer a {
+    color: #7f8c8d; // Footer links same color as text
+}
+
+footer a:hover {
+    color: #555; // Darker on hover
+}
+
+/* Basic responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .container {
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1.1em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #16a085; // Gleiches Grün wie h2
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Stellt sicher, dass der Text im Button zentriert ist */
+}
+
+.button-link:hover {
+    background-color: #117a64; // Etwas dunkleres Grün beim Hover
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Stile für aboutme.html */
+.ueber-mich-container { /* Spezifischer Container für die Über-Mich-Seite */
+    text-align: left; /* Standard Textausrichtung für die Sektionen */
+}
+
+.ueber-mich-container h1 {
+    margin-bottom: 30px;
+    text-align: center; /* Überschrift der Seite zentriert */
+}
+
+.foto-placeholder {
+    max-width: 250px;
+    height: auto;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto 20px auto; /* Standard: zentriert über dem Text für Mobile First */
+}
+
+/* Clearfix für den Float, falls verwendet */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.ueber-mich-sektion {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.ueber-mich-sektion:last-child {
+    border-bottom: none;
+}
+
+.back-to-home-link {
+    clear: both; /* Falls Foto gefloated wird */
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Desktop-Ansicht für Foto-Placeholder (float) */
+@media (min-width: 769px) {
+    .foto-placeholder {
+        float: right;
+        margin: 0 0 10px 20px; /* Oben, Rechts, Unten, Links */
+    }
+}
