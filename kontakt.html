@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontaktieren Sie psEVO-IT für Anfragen zu Webdienstleistungen und IT-Support.">
+    <title>Kontakt - psEVO-IT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div data-include="./layout/header.html"></div>
+
+    <main role="main">
+        <div class="container">
+            <section id="kontakt-seite">
+                <h2>Kontakt aufnehmen</h2>
+                <p>Haben Sie Fragen oder möchten Sie ein Projekt besprechen? Nutzen Sie gerne das Formular, um mit mir in Kontakt zu treten. Ich freue mich auf Ihre Nachricht!</p>
+                <form name="kontakt-seite-formular" method="POST" data-netlify="true" action="/danke/" class="kontakt-formular">
+                    <div class="form-gruppe">
+                        <label for="name">Ihr Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-gruppe">
+                        <label for="email">Ihre E-Mail-Adresse:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-gruppe">
+                        <label for="betreff">Betreff (optional):</label>
+                        <input type="text" id="betreff" name="betreff">
+                    </div>
+                    <div class="form-gruppe">
+                        <label for="nachricht">Ihre Nachricht:</label>
+                        <textarea id="nachricht" name="nachricht" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="button-link">Nachricht senden</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <div data-include="./layout/footer.html"></div>
+    <script src="js/script.js"></script>
+</body>
+</html>
