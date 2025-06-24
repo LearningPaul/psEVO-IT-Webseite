@@ -9,9 +9,6 @@ body {
     padding: 0; // Reset padding for body
     background-color: #f4f7f6; // Ein sanfter Hintergrund
     color: #333;    
-    // display: flex; // Entfernt, da Container sich selbst zentrieren und dies globale Layout-Probleme verursachen kann
-    // flex-direction: column; // Entfernt
-    // align-items: center;    // Entfernt
     min-height: 100vh;
     padding-top: 40px; // Add some space at the top
     padding-bottom: 40px; // Add some space at the bottom
@@ -32,8 +29,6 @@ body {
 
 header {
     margin-bottom: 30px;
-    // If <header> is a direct child of <body> (e.g., on aboutme.html for a global header)
-    // it should span the full width and its content centered by an inner .container
     width: 100%;
     box-sizing: border-box; // Ensure padding/border don't add to width
 }
@@ -45,19 +40,17 @@ header h1 {
     font-size: 2.5em; // Larger main heading
 }
 
-header p.slogan { /* Spezifischer Selektor für den Slogan im Header, falls nötig */
+header p.slogan {
     color: #34495e; // Etwas heller als die Überschrift
     font-size: 1.2em; // Slightly larger sub-heading
     margin-top: 0;
 }
 
-/* Allgemeiner p-Tag Stil, falls der Slogan kein eigener p-Tag ist */
 header p {
     color: #34495e;
     font-size: 1.2em;
     margin-top: 0;
 }
-
 
 section {
     margin-bottom: 30px; // Space between sections
@@ -79,15 +72,12 @@ p {
     text-align: left; /* Standard Textausrichtung für längere Absätze */
 }
 
-/* Spezifische Zentrierung für kurze Texte im Header oder Footer, falls nötig */
 header p, footer p {
     text-align: center;
 }
-/* Und für den "Kurz & Knapp" Abschnitt, falls gewünscht */
 #ueber-mich-kurz p {
     text-align: center;
 }
-
 
 a {
     color: #2980b9; // Ein klares Blau für Links
@@ -116,7 +106,6 @@ footer a:hover {
     color: #555; // Darker on hover
 }
 
-/* Basic responsiveness */
 @media (max-width: 600px) {
     body {
         padding-top: 20px;
@@ -155,8 +144,7 @@ footer a:hover {
     text-decoration: none;
 }
 
-/* Stile für aboutme.html */
-.ueber-mich-container { /* Spezifischer Container für die Über-Mich-Seite */
+.ueber-mich-container {
     text-align: left; /* Standard Textausrichtung für die Sektionen */
 }
 
@@ -175,7 +163,6 @@ footer a:hover {
     margin: 0 auto 20px auto; /* Standard: zentriert über dem Text für Mobile First */
 }
 
-/* Clearfix für den Float, falls verwendet */
 .clearfix::after {
     content: "";
     clear: both;
@@ -198,10 +185,46 @@ footer a:hover {
     margin-top: 30px;
 }
 
-/* Desktop-Ansicht für Foto-Placeholder (float) */
 @media (min-width: 769px) {
     .foto-placeholder {
         float: right;
         margin: 0 0 10px 20px; /* Oben, Rechts, Unten, Links */
     }
 }
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+

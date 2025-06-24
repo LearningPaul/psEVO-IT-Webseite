@@ -1,0 +1,227 @@
+@charset "UTF-8";
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+  color: #333;
+  min-height: 100vh;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 700px;
+  width: 90%;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Zentriert den Text und Inline-Block-Elemente innerhalb des Containers */
+  margin-left: auto; /* Zentriert den Container-Block horizontal */
+  margin-right: auto; /* Zentriert den Container-Block horizontal */
+}
+
+header {
+  margin-bottom: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header h1 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 2.5em;
+}
+
+header p.slogan {
+  color: #34495e;
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+header p {
+  color: #34495e;
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #16a085;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  font-size: 1.8em;
+}
+
+p {
+  color: #555;
+  font-size: 1em;
+  line-height: 1.7;
+  text-align: left; /* Standard Textausrichtung für längere Absätze */
+}
+
+header p, footer p {
+  text-align: center;
+}
+
+#ueber-mich-kurz p {
+  text-align: center;
+}
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1c5a82;
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-size: 0.9em;
+  color: #7f8c8d;
+}
+
+footer a {
+  color: #7f8c8d;
+}
+
+footer a:hover {
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .container {
+    padding: 20px;
+  }
+  header h1 {
+    font-size: 2em;
+  }
+  header p {
+    font-size: 1.1em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+}
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background-color: #16a085;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Stellt sicher, dass der Text im Button zentriert ist */
+}
+
+.button-link:hover {
+  background-color: #117a64;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.ueber-mich-container {
+  text-align: left; /* Standard Textausrichtung für die Sektionen */
+}
+
+.ueber-mich-container h1 {
+  margin-bottom: 30px;
+  text-align: center; /* Überschrift der Seite zentriert */
+}
+
+.foto-placeholder {
+  max-width: 250px;
+  height: auto;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto 20px auto; /* Standard: zentriert über dem Text für Mobile First */
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.ueber-mich-sektion {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.ueber-mich-sektion:last-child {
+  border-bottom: none;
+}
+
+.back-to-home-link {
+  clear: both; /* Falls Foto gefloated wird */
+  text-align: center;
+  margin-top: 30px;
+}
+
+@media (min-width: 769px) {
+  .foto-placeholder {
+    float: right;
+    margin: 0 0 10px 20px; /* Oben, Rechts, Unten, Links */
+  }
+}
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
