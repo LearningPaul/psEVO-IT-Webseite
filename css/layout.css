@@ -131,6 +131,12 @@
   }
 }
 
+@media (min-width: 769px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
 /* === Footer === */
 footer {
   margin-top: 40px;
