@@ -43,6 +43,12 @@
     color: #0056b3;
 }
 
+/* Einheitliche Button-Farbe auf Impressum/Datenschutz erzwingen */
+.legal-container .button-link {
+  color: #fff !important;
+  background-color: #16a085 !important;
+}
+
 .impressum-boxes-container {
   display: flex;
   justify-content: space-between;

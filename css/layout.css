@@ -27,7 +27,15 @@
 }
 
 .main-navigation {
-  display: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  position: static;
+  top: auto;
+  transform: none;
+  right: auto;
+  z-index: auto;
 }
 
 .main-navigation a {
@@ -77,15 +85,19 @@
   body { /* Body padding-top für mobile Header-Höhe anpassen, falls nötig */
     padding-top: 80px;
   }
+  .main-navigation {
+    display: none;
+  }
   .main-navigation.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     width: 100%;
     background-color: #f8f9fa;
-    flex-direction: column;
-    align-items: center;
     padding: 10px 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border: 1px solid #e7e7e7;
@@ -94,14 +106,14 @@
     border-radius: 0 0 4px 4px;
     margin-right: 0;
   }
-  .main-navigation a { /* Gilt für Links im geschlossenen und geöffneten Zustand */
-    padding: 12px 20px; /* Allgemeines Padding für Links */
-    width: 100%; /* Für vertikales Menü */
-    text-align: center; /* Für vertikales Menü */
-    border-bottom: 1px solid #e7e7e7; /* Für vertikales Menü */
-    box-sizing: border-box; /* Für vertikales Menü */
+  .main-navigation a {
+    padding: 12px 20px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #e7e7e7;
+    box-sizing: border-box;
   }
-   .main-navigation.open a { /* Spezifisch für geöffnete mobile Navi */
+  .main-navigation.open a {
     text-align: left;
     border-bottom: 1px solid #e9ecef;
   }
