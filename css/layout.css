@@ -30,22 +30,23 @@
   margin-right: auto;
 }
 
-/* --- Navigation: Immer über Hamburger-Menü ein-/ausblendbar, auch auf Desktop --- */
+/* --- Navigation: Immer über Hamburger-Menü ein-/ausblendbar, auch auf Desktop, jetzt waagerecht und mittig --- */
 .main-navigation {
   display: none;
-  flex-direction: column;
-  align-items: flex-end;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 100%;
-  right: 0;
-  left: auto;
+  left: 50%;
+  transform: translateX(-50%);
   background: #f8f9fa;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border: 1px solid #e7e7e7;
   border-top: none;
   z-index: 999;
   border-radius: 0 0 4px 4px;
-  margin-right: 0;
+  margin: 0;
   width: auto;
   padding: 10px 0;
   white-space: nowrap;
@@ -61,8 +62,8 @@
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  width: 100%;
-  text-align: right;
+  width: auto;
+  text-align: center;
 }
 
 .main-navigation a:hover {
@@ -106,19 +107,20 @@
 
 @media (min-width: 769px) {
   .main-navigation {
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 100%;
-    right: 0;
-    left: auto;
+    left: 50%;
+    transform: translateX(-50%);
     background: #f8f9fa;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border: 1px solid #e7e7e7;
     border-top: none;
     z-index: 999;
     border-radius: 0 0 4px 4px;
-    margin-right: 0;
+    margin: 0;
     width: auto;
     padding: 10px 0;
     white-space: nowrap;
@@ -127,8 +129,8 @@
     display: flex !important;
   }
   .main-navigation a {
-    width: 100%;
-    text-align: right;
+    width: auto;
+    text-align: center;
   }
   .nav-toggle {
     display: block;
