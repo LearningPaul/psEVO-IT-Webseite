@@ -122,24 +122,6 @@ footer a:hover {
     font-size: 1.5em;
   }
 }
-.button-link {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 15px;
-  background-color: #16a085;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  text-align: center; /* Stellt sicher, dass der Text im Button zentriert ist */
-}
-
-.button-link:hover {
-  background-color: #117a64;
-  color: #ffffff;
-  text-decoration: none;
-}
 
 .ueber-mich-container {
   text-align: left; /* Standard Textausrichtung für die Sektionen */
