@@ -1,28 +1,31 @@
-<footer class="site-footer">
-  <p>&copy; <span id="currentYear"></span> Psevo IT - Dein digitaler Partner. Alle Rechte vorbehalten.</p>
+<footer class="site-footer" role="contentinfo">
+  <p>&copy; <span id="currentYear"></span> Psevo IT – Dein IT-Partner. Alle Rechte vorbehalten.</p>
   <div class="legal-links">
     <a href="impressum.html">Impressum</a> |
     <a href="datenschutz.html">Datenschutz</a>
   </div>
-  <!-- Eventuell weitere Links oder Inhalte im Footer -->
+  <button id="accessibilityToggle" class="accessibility-btn" aria-label="Barrierefreiheit öffnen">Barrierefreiheit</button>
+  <div id="accessibilityPanel" class="accessibility-panel" style="display:none;">
+    <label><input type="checkbox" id="toggleContrast"> Hoher Kontrast</label><br>
+    <label><input type="checkbox" id="toggleEasyLanguage"> Einfache Sprache</label>
+  </div>
 </footer>
-<!-- Das Script zum Aktualisieren des Jahres wird nun von script.js nach dem Laden der Includes aufgerufen -->
 
 <div data-include="./layout/footer.html"></div>
 <!-- Kontakt Pop-up Button -->
-<button id="openContactModalBtn" class="contact-modal-trigger">Kontakt</button>
+<button id="openContactModalBtn" class="contact-modal-trigger" aria-label="Kontaktformular öffnen">Kontakt</button>
 <!-- Das Kontakt-Modal -->
-<div id="contactModal" class="modal">
+<div id="contactModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle" aria-describedby="contactModalDesc">
     <div class="modal-content">
-        <span class="close-modal-btn">&times;</span>
-        <h2>Kontakt aufnehmen</h2>
-        <p>Haben Sie Fragen oder möchten Sie ein Projekt besprechen? Nutzen Sie gerne das Formular, um mit mir in Kontakt zu treten. Ich freue mich auf Ihre Nachricht!</p>
+        <span class="close-modal-btn" aria-label="Schließen">&times;</span>
+        <h2 id="contactModalTitle">Kontakt</h2>
+        <p id="contactModalDesc">Schreib mir einfach. Ich melde mich schnell zurück.</p>
         <form name="kontakt-seite-formular" method="POST" data-netlify="true" action="/danke.html" class="kontakt-formular">
-            <div class="form-gruppe"><label for="modalName">Ihr Name:</label><input type="text" id="modalName" name="name" required></div>
-            <div class="form-gruppe"><label for="modalEmail">Ihre E-Mail-Adresse:</label><input type="email" id="modalEmail" name="email" required></div>
-            <div class="form-gruppe"><label for="modalBetreff">Betreff (optional):</label><input type="text" id="modalBetreff" name="betreff"></div>
-            <div class="form-gruppe"><label for="modalNachricht">Ihre Nachricht:</label><textarea id="modalNachricht" name="nachricht" rows="6" required></textarea></div>
-            <button type="submit" class="button-link">Nachricht senden</button>
+            <div class="form-gruppe"><label for="modalName">Name:</label><input type="text" id="modalName" name="name" required></div>
+            <div class="form-gruppe"><label for="modalEmail">E-Mail:</label><input type="email" id="modalEmail" name="email" required></div>
+            <div class="form-gruppe"><label for="modalBetreff">Betreff:</label><input type="text" id="modalBetreff" name="betreff"></div>
+            <div class="form-gruppe"><label for="modalNachricht">Nachricht:</label><textarea id="modalNachricht" name="nachricht" rows="6" required></textarea></div>
+            <button type="submit" class="button-link" aria-label="Nachricht senden">Senden</button>
         </form>
     </div>
 </div>

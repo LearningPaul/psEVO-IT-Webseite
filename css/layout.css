@@ -40,11 +40,11 @@
   right: 60px; /* Abstand zum Hamburger-Symbol, ggf. anpassen */
   left: auto;
   height: 100%;
-  background: transparent;
-  box-shadow: none;
+  background: #343a40;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border: none;
   z-index: 1000;
-  border-radius: 0;
+  border-radius: 0 0 4px 4px;
   width: auto;
   max-width: none;
   padding: 0;
@@ -59,13 +59,14 @@
 .main-navigation a {
   padding: 10px 15px;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  color: #fff;
+  font-weight: 600;
   width: auto;
   text-align: center;
-  background: #f8f9fa;
+  background: transparent;
   border-radius: 4px;
   margin-right: 8px;
+  transition: background 0.2s, color 0.2s;
 }
 
 .main-navigation a:last-child {
@@ -73,8 +74,8 @@
 }
 
 .main-navigation a:hover {
-  color: #007bff;
-  background-color: #e9ecef;
+  color: #ffd700;
+  background-color: #23272b;
 }
 
 .nav-toggle {
@@ -155,6 +156,7 @@ footer {
   font-size: 0.9em;
   color: #7f8c8d;
   text-align: center;
+  background: #23272b;
 }
 
 footer p { /* Spezifische Zentrierung für Footer-Texte */
@@ -162,11 +164,12 @@ footer p { /* Spezifische Zentrierung für Footer-Texte */
 }
 
 footer a {
-  color: #6c757d;
+  color: #ffd700;
 }
 
 footer a:hover {
-  color: #495057;
+  color: #fff;
+  text-decoration: underline;
 }
 
 footer .legal-links {
@@ -175,9 +178,71 @@ footer .legal-links {
 }
 footer .legal-links a {
     margin: 0 10px;
-    color: #6c757d;
+    color: #ffd700;
 }
 footer .legal-links a:hover {
-    color: #495057;
+    color: #fff;
     text-decoration: underline;
+}
+
+/* Accessibility Button & Panel */
+.accessibility-btn {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background: #343a40;
+  color: #ffd700;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 18px;
+  font-size: 1em;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1100;
+}
+.accessibility-panel {
+  position: fixed;
+  bottom: 140px;
+  right: 20px;
+  background: #fff;
+  color: #23272b;
+  border: 1px solid #343a40;
+  border-radius: 8px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  z-index: 1101;
+}
+
+/* Hoher Kontrast */
+body.high-contrast .main-navigation {
+  background: #000 !important;
+}
+body.high-contrast .main-navigation a {
+  color: #fff !important;
+  background: #000 !important;
+}
+body.high-contrast .main-navigation a:hover {
+  color: #ffd700 !important;
+  background: #222 !important;
+}
+body.high-contrast footer {
+  background: #000 !important;
+  color: #fff !important;
+}
+body.high-contrast footer a,
+body.high-contrast footer .legal-links a {
+  color: #ffd700 !important;
+}
+body.high-contrast footer a:hover,
+body.high-contrast footer .legal-links a:hover {
+  color: #fff !important;
+}
+
+/* Einfache Sprache (nur optisch, Text per JS) */
+body.easy-language .main-navigation a,
+body.easy-language .button-link,
+body.easy-language .contact-modal-trigger {
+  font-size: 1.1em;
+  letter-spacing: 0.02em;
 }
