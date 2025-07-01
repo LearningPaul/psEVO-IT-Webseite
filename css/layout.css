@@ -56,13 +56,15 @@
 }
 
 .nav-toggle {
-  display: block;
+  display: block !important;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   background: none;
   border: none;
   cursor: pointer;
-  padding: 10px;
   z-index: 1001;
-  margin-left: auto;
 }
 
 .hamburger-line {
