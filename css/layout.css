@@ -30,26 +30,24 @@
   margin-right: auto;
 }
 
-/* --- Navigation: Immer über Hamburger-Menü ein-/ausblendbar, auch auf Desktop, waagerecht und mittig, direkt unter Header --- */
+/* --- Navigation: Links horizontal auf einer Linie mit Hamburger-Symbol, rechtsbündig --- */
 .main-navigation {
   display: none;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   position: absolute;
-  top: calc(100% + 2px); /* Direkt unterhalb des Headers, minimaler Abstand */
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  background: #f8f9fa;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border: 1px solid #e7e7e7;
-  border-top: none;
-  z-index: 999;
-  border-radius: 0 0 4px 4px;
-  width: max-content;
-  max-width: 95vw;
-  padding: 10px 24px;
+  top: 0;
+  right: 60px; /* Abstand zum Hamburger-Symbol, ggf. anpassen */
+  left: auto;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  z-index: 1000;
+  border-radius: 0;
+  width: auto;
+  max-width: none;
+  padding: 0;
   white-space: nowrap;
   transition: none;
 }
@@ -65,24 +63,31 @@
   font-weight: 500;
   width: auto;
   text-align: center;
+  background: #f8f9fa;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.main-navigation a:last-child {
+  margin-right: 0;
 }
 
 .main-navigation a:hover {
   color: #007bff;
   background-color: #e9ecef;
-  border-radius: 4px;
 }
 
 .nav-toggle {
   display: block;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
+  right: 0;
+  top: 0;
+  transform: none;
   background: none;
   border: none;
   cursor: pointer;
   z-index: 1001;
+  margin-left: 8px;
 }
 
 .hamburger-line {
@@ -109,22 +114,20 @@
 @media (min-width: 769px) {
   .main-navigation {
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     position: absolute;
-    top: calc(100% + 2px);
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    background: #f8f9fa;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border: 1px solid #e7e7e7;
-    border-top: none;
-    z-index: 999;
-    border-radius: 0 0 4px 4px;
-    width: max-content;
-    max-width: 95vw;
-    padding: 10px 24px;
+    top: 0;
+    right: 60px;
+    left: auto;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    z-index: 1000;
+    border-radius: 0;
+    width: auto;
+    max-width: none;
+    padding: 0;
     white-space: nowrap;
   }
   .main-navigation.open {
@@ -136,6 +139,11 @@
   }
   .nav-toggle {
     display: block;
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+    margin-left: 8px;
   }
 }
 
